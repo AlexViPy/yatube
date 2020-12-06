@@ -13,8 +13,6 @@ class GroupAdmin(admin.ModelAdmin):
     search_fields = ("title",) 
     empty_value_display = "-пусто-"
 
-class ArticleAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug':('title',)}
 # при регистрации модели Post источником конфигурации для неё назначаем класс PostAdmin
 admin.site.register(Post, PostAdmin)
 admin.site.register(Group, GroupAdmin)
